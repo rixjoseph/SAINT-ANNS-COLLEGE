@@ -1,0 +1,193 @@
+<?php include_once("../shares/db/mydatabase.inc"); ?>
+<html>
+<head>
+<title>Doctor's form</title>
+<style>
+
+input[type=text],input[type=email],input[type=time],input[type=password],input[type=date],select
+{
+	border-radius:3px;
+	height:50px;
+	width:300px;
+}
+
+input[type=submit],input[type=reset]
+{
+	background-color:tomato;
+	color:white;
+	border:none;
+	width:70px;
+	height:30px;
+}
+input[type=submit]:hover,input[type=reset]:hover
+{
+	background-color:red
+}
+table
+{
+	border-radius:3px;	
+	height:600px;
+	cellspacing:500px;
+	cellpadding:400px;
+}
+textarea
+{
+	border-radius:4px;
+	height:50px;
+	width:300px;
+}
+
+
+</style>
+</head>
+    <?php
+$sql="select ifnull(max(did),0)+1 from tbl_doctor";
+$tbl=getDatas($sql);
+?>
+<body>
+<center>
+
+<form method="post">
+<table>
+<h1>DOCTOR REGISTRATION</h1><br><br>
+<tr>
+<td>
+<label>DOCTOR ID :</label>
+</td><td>
+<input type="text" name="did" value="<?php echo $tbl[0][0];?>" readonly="">></td>
+</tr>
+<tr>
+<td>
+<label>FIRST NAME:</label></td>
+<td><input type="text" name="name1" required></td>
+</tr>
+<tr>
+<td>
+<label>LAST NAME:</label></td>
+<td><input type="text" name="name2" required></td>
+    </tr>
+<tr>
+<td>
+<label>HOUSE NUMBER:</label></td>
+<td><input type="text" name="hno" required></td>
+</tr>
+<tr>
+<td>
+<label>STREET:</label></td>
+<td><input type="text" name="street" required></td>
+</tr>
+<tr>
+<td>
+<label>CITY:</label></td>
+<td><input type="text" name="city" required></td>
+</tr>
+<tr>
+<td>
+<label>DISTRICT:</label></td>
+<td><input type="text" name="district" required></td>
+</tr>
+<tr>
+<td>
+<label>DOCTOR QUALIFICATION:</label></td>
+<td><input type="text" name="doc_quali" required></td>
+</tr>    
+<tr>
+<td><label>GENDER:</label></td>
+<td><input type="radio" name="gender" value="male">Male
+    <input type="radio" name="gender" value="female">Female</td></tr>
+<tr>
+<td><label>E-MAIL:</label></td>
+<td><input type="email" name="email1" required></td>
+</tr>
+<tr>
+<td><label>MOBILE NUMBER:</label></td>
+<td><input type="text" name="mob" required></td>
+</tr><tr>
+<td><label>DESIGNATION</label></td>
+<td><input type="text" name="desig" required ></td>
+</tr>
+    <tr>
+<td><label>DATE OF BIRTH:</label></td>
+<td><input type="date" name="dob" required></td>
+</tr>
+      <tr>
+<td><label>DATE OF JOINING:</label></td>
+<td><input type="date" name="doj" required></td>
+</tr>
+    
+<tr>
+
+<td><label>DEPARTMENT</label></td>
+<td><select name="select1">
+
+<option value="onco">ONCOLOGY</option>
+<option value="pys">PSYCHIATRY</option>
+<option value="neuro">NEUROSCIENCES</option>
+<option value="derm">DERMATOLOGY</option></td>
+</tr>
+
+
+<tr>
+<td><label>MORNING TIMESLOT:</label></td>
+<td><input type="time" name="t1"></td>
+</tr>
+<tr>
+<td>
+<label>AFTERNOON TIMESLOT:</label></td>
+<td><input type="time" name="t2"></td></tr>
+<tr>
+<td><label>DAYS:</label></td>
+<td><input type="checkbox" name="day1" value="Monday">Monday
+<input type="checkbox" name="day2" value="Tuesday">Tuesday
+<input type="checkbox" name="day3" value="Wednesday">Wednesday
+<input type="checkbox" name="day4" value="Thursday">Thursday
+<input type="checkbox" name="day5" value="Friday">Friday
+<input type="checkbox" name="day6" value="Saturday">Saturday</td></tr>
+<tr>
+<td><label>PASSWORD:</label></td>
+<td><input type="password" name="passwrd"></td>
+</tr>
+</table><br><br>
+<input type="submit" name="submit1" value="Save">&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="reset" name="reset" value="Reset">
+    </form></center>
+</body></html>
+<?php
+if(isset($_POST['did']))
+{
+$a=$_POST['did'];
+$b=$_POST['name1'];
+$c=$_POST['name2'];
+$d=$_POST['hno'];
+$e=$_POST['street'];
+$f=$_POST['city'];
+$g=$_POST['district'];
+$h=$_POST['gender'];
+$i=$_POST['dob'];
+$j=$_POST['email1'];
+$k=$_POST['mob'];
+$l=$_POST['passwrd'];
+$m=$_POST['doj'];
+$n=$_POST['desig'];
+$o=$_POST['t1'];
+$p=$_POST['t2'];
+$q=$_POST['day1'];
+$r=$_POST['day2'];
+$s=$_POST['day3'];
+$t=$_POST['day4'];
+$u=$_POST['day5'];
+$v=$_POST['day6'];
+$dpt=$_POST['select1'];
+$qua=$_POST['doc_quali'];
+    $sql="select ifnull(max(tid),0)+1 from tbl_schedule";
+$tbl=getDatas($sql);
+$sql="insert into tbl_doctor values('$a','$b','$c','$dpt','$h','$qua','$d','$e','$f','$g','$j','$m','$k','$n','$i')";
+setDatas($sql);
+$sql="insert into tbl_login values('$j','$l','doctor')";
+		setDatas($sql);
+$sql="insert into tbl_schedule values('$tbl[0][0]','$a','$q','$r','$s','$t','$u','$v','$o','$p')";
+setDatas($sql);
+    msgbox('Success');
+}
+
+?>
