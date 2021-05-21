@@ -13,10 +13,7 @@
         <div class="row">
           <div class="col-md-8">
             <h1 class="text-white" data-animation-out="fadeOutRight" data-delay-out="5" data-duration-in=".3" data-animation-in="fadeInLeft" data-delay-in=".1">Your bright future is our mission</h1>
-            <p class="text-muted mb-4" data-animation-out="fadeOutRight" data-delay-out="5" data-duration-in=".3" data-animation-in="fadeInLeft" data-delay-in=".4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-              tempor
-              incididunt ut labore et
-              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exer</p>
+            <p class="text-muted mb-4" data-animation-out="fadeOutRight" data-delay-out="5" data-duration-in=".3" data-animation-in="fadeInLeft" data-delay-in=".4">Anns aspires to be a transformational leader in education, facilitating and celebrating the full flowering of ‘life in abundance’</p>
             <a href="{{ route('auth.login') }}" class="btn btn-primary" data-animation-out="fadeOutRight" data-delay-out="5" data-duration-in=".3" data-animation-in="fadeInLeft" data-delay-in=".7">Apply now</a>
           </div>
         </div>
@@ -26,10 +23,7 @@
         <div class="row">
           <div class="col-md-8">
             <h1 class="text-white" data-animation-out="fadeOutUp" data-delay-out="5" data-duration-in=".3" data-animation-in="fadeInDown" data-delay-in=".1">Your bright future is our mission</h1>
-            <p class="text-muted mb-4" data-animation-out="fadeOutUp" data-delay-out="5" data-duration-in=".3" data-animation-in="fadeInDown" data-delay-in=".4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-              tempor
-              incididunt ut labore et
-              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exer</p>
+            <p class="text-muted mb-4" data-animation-out="fadeOutUp" data-delay-out="5" data-duration-in=".3" data-animation-in="fadeInDown" data-delay-in=".4">Anns aspires to be a transformational leader in education, facilitating and celebrating the full flowering of ‘life in abundance’</p>
             <a href="{{ route('auth.login') }}" class="btn btn-primary" data-animation-out="fadeOutUp" data-delay-out="5" data-duration-in=".3" data-animation-in="fadeInDown" data-delay-in=".7">Apply now</a>
           </div>
         </div>
@@ -39,10 +33,7 @@
         <div class="row">
           <div class="col-md-8">
             <h1 class="text-white" data-animation-out="fadeOutDown" data-delay-out="5" data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".1">Your bright future is our mission</h1>
-            <p class="text-muted mb-4" data-animation-out="fadeOutDown" data-delay-out="5" data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-              tempor
-              incididunt ut labore et
-              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exer</p>
+            <p class="text-muted mb-4" data-animation-out="fadeOutDown" data-delay-out="5" data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".4">Anns aspires to be a transformational leader in education, facilitating and celebrating the full flowering of ‘life in abundance’</p>
             <a href="{{ route('auth.login') }}" class="btn btn-primary" data-animation-out="fadeOutDown" data-delay-out="5" data-duration-in=".3" data-animation-in="zoomIn" data-delay-in=".7">Apply now</a>
           </div>
         </div>
@@ -135,8 +126,8 @@
         <a href="course-single.html">
           <h4 class="card-title">MCA</h4>
         </a>
-        <p class="card-text mb-4"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-          incididunt ut labore et dolore magna.</p>
+        <p class="card-text mb-4"> PG Department of Computer Application at Anns offers MCA programme that is completely unique,
+         Industry focused and student centric.</p>
         <a href="{{ route('auth.login') }}" class="btn btn-primary btn-sm">Apply now</a>
       </div>
     </div>
@@ -153,8 +144,8 @@
         <a href="course-single.html">
           <h4 class="card-title">MSW</h4>
         </a>
-        <p class="card-text mb-4"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-          incididunt ut labore et dolore magna.</p>
+        <p class="card-text mb-4"> PG Department of Computer Application at Anns offers MSW programme that is completely unique,
+         Industry focused and student centric.</p>
         <a href="{{ route('auth.login') }}" class="btn btn-primary btn-sm">Apply now</a>
       </div>
     </div>
@@ -171,8 +162,8 @@
         <a href="course-single.html">
           <h4 class="card-title">MBA</h4>
         </a>
-        <p class="card-text mb-4"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-          incididunt ut labore et dolore magna.</p>
+        <p class="card-text mb-4"> PG Department of Computer Application at Anns offers MBA programme that is completely unique, 
+        Industry focused and student centric.</p>
         <a href="{{ route('auth.login') }}" class="btn btn-primary btn-sm">Apply now</a>
       </div>
     </div>
@@ -189,8 +180,8 @@
         <a href="course-single.html">
           <h4 class="card-title">BCA</h4>
         </a>
-        <p class="card-text mb-4"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-          incididunt ut labore et dolore magna.</p>
+        <p class="card-text mb-4"> UG Department of Computer Application at Anns offers BCA programme that is completely unique,
+         Industry focused and student centric.</p>
         <a href="{{ route('auth.login') }}" class="btn btn-primary btn-sm">Apply now</a>
       </div>
     </div>
@@ -205,10 +196,10 @@
           <li class="list-inline-item"><a class="text-color" href="#"></a></li>
         </ul>
         <a href="course-single.html">
-          <h4 class="card-title">Bcom</h4>
+          <h4 class="card-title">BSW</h4>
         </a>
-        <p class="card-text mb-4"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-          incididunt ut labore et dolore magna.</p>
+        <p class="card-text mb-4"> UG Department of Computer Application at Anns offers BSW programme that is completely unique,
+         Industry focused and student centric.</p>
         <a href="{{ route('auth.login') }}" class="btn btn-primary btn-sm">Apply now</a>
       </div>
     </div>
@@ -225,8 +216,8 @@
         <a href="course-single.html">
           <h4 class="card-title">BBA</h4>
         </a>
-        <p class="card-text mb-4"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-          incididunt ut labore et dolore magna.</p>
+        <p class="card-text mb-4"> UG Department of Computer Application at Anns offers BBA programme that is completely unique,
+         Industry focused and student centric.</p>
         <a href="{{ route('auth.login') }}" class="btn btn-primary btn-sm">Apply now</a>
       </div>
     </div>
