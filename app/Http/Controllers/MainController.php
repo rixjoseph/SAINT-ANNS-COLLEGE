@@ -162,6 +162,8 @@ class MainController extends Controller
                 else if($ut->usertype=='admin')
                 {
                     echo "admin";
+                    $i=login_table::select('email')->where('email','like',"$getmail")->first();
+                    $request->session()->put('mailid',$i);
                     // $i=faculty::select('id')->where('mailid','like',"$getmail")->first();
                     // echo $i;
                     return redirect('/admin/admindashboard');
@@ -181,7 +183,11 @@ class MainController extends Controller
 
     function logout()
     {
-        return redirect('auth/login');
+        if(session()->has('mailid')){
+            session()->pull('mailid');
+            return redirect('auth/login');
+        }
+        
     }
         
 

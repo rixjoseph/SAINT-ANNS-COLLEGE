@@ -16,25 +16,29 @@ use App\Http\Controllers\AdminController;
 |
 */
 
+Route::get('/auth/logout',[MainController::class,'logout'])->name('auth.logout');
+Route::post('/auth/check',[MainController::class,'check'])->name('auth.check');
+Route::get('/auth/login',[MainController::class,'login'])->name('auth.login');
+Route::get('/auth/register',[MainController::class,'register'])->name('auth.register');
+Route::get('/auth/adminregister',[MainController::class,'adregister'])->name('auth.adminregister');
+
+Route::post('/auth/save',[MainController::class,'save'])->name('auth.save');
+Route::post('/auth/adminsave',[MainController::class,'adsave'])->name('auth.adminsave');
+Route::post('/auth/check',[MainController::class,'check'])->name('auth.check');
 
 Route::get('/',[MainController::class,'create']);
 Route::get('/about',[MainController::class,'about']);
 Route::get('/icourses',[MainController::class,'icourses']);
 Route::get('/contact',[MainController::class,'contact']);
 Route::post('/readcontact',[AdminController::class,'storemessage'])->name('readcontact');
+
+
+Route::group(['middleware' => 'AuthCheck'],function(){
+
+
 Route::get('/admin/showcontact',[AdminController::class,'showcontact'])->name('admin.showcontact');
 Route::get('/admin/viewcontact/{id}',[AdminController::class,'viewcontact'])->name('admin.viewcontact.{id}');
 Route::get('/admin/delete/{id}',[AdminController::class,'deletecontact']);
-
-
-Route::get('/auth/register',[MainController::class,'register'])->name('auth.register');
-Route::get('/auth/adminregister',[MainController::class,'adregister'])->name('auth.adminregister');
-Route::get('/auth/login',[MainController::class,'login'])->name('auth.login');
-
-
-Route::post('/auth/save',[MainController::class,'save'])->name('auth.save');
-Route::post('/auth/adminsave',[MainController::class,'adsave'])->name('auth.adminsave');
-Route::post('/auth/check',[MainController::class,'check'])->name('auth.check');
 
 
 Route::get('/student/studentdashboard',[StudentController::class,'create']);
@@ -61,7 +65,7 @@ Route::post('/readbsw',[StudentController::class,'storebsw'])->name('readbsw');
 
 Route::get('/student/profile',[StudentController::class,'showprofile'])->name('student.profile');
 
-Route::get('/auth/logout',[MainController::class,'logout'])->name('auth.logout');
+
 
 
 Route::get('/admin/admindashboard',[AdminController::class,'create']);
@@ -102,5 +106,8 @@ Route::post('/readapp',[AdminController::class,'showapprovedapp'])->name('readap
 
 Route::get('/admin/approvedugapplication',[AdminController::class,'approvedugapplication'])->name('admin.approvedugapplication');
 Route::post('/readugapp',[AdminController::class,'showapprovedugapp'])->name('readugapp');
+
+
+});
 
 //Route::get('/student/edudetails',[StudentController::class,'eduform'])->name('student.edudetails');

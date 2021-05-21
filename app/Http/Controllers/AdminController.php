@@ -200,7 +200,7 @@ class AdminController extends Controller
 
         $contactmodel->save();
 
-        return view('index');
+        return redirect('/');
 
     }
 
