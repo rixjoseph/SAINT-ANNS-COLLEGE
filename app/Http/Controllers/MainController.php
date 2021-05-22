@@ -72,7 +72,7 @@ class MainController extends Controller
         'password'=>$request->password
         );
 
-        //Mail::to($login_table['email'])->send(new RegisterMail($login_table));
+        Mail::to($login_table['email'])->send(new RegisterMail($login_table));
 
         return view('auth.login');
 
